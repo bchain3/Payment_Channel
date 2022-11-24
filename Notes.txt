@@ -1,0 +1,13 @@
+Signature replay attack
+- Lets say Alice creates  twounidirectional payment contracts to pay Bob and Charlie 1 ETH each
+- since we create the signature using only amount Bob can claim eth given to Charlie
+- so we create signature with channel (contract) address and amount
+
+Program Flow
+- Create the contract
+- send contract the required amount of funds
+- sign a transaction that says someone is allowed to withdraw x amount of funds from the contract
+- let that someone withdraw those funds 
+- prevent reentrancy
+- in case of disagreement selfdestruct the contract
+- in case of expiry selfdestruct the contract
